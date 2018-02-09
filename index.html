@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="css/reset.css" type="text/css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="msapplication-tap-highlight" content="no"/>
+
+        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/createjs-2013.09.25.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        
+    </head>
+    <body ondragstart="return false;" ondrop="return false;" >
+          <script>
+                $(document).ready(function(){
+						var aLevels = new Array();
+						//LEVEL 1
+						aLevels.push("4a4a4a4a8a8a8a8a6a6a6a6a4a4a4a8a8a8a8a6a6a6a6a1a7a7a7a1a7a7a7a7a1a7a7a7a4a8a6a1a4a8a6a1a4a8a6a1a7a7a7a7a1a7a7a1a7a7a7a7a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a");
+						//LEVEL 2
+						aLevels.push("1a4a4a4a4a4a4a4a4a4a4a1a4a1a4a9a9a7a9a9a4a1a4a1a1a1a9a9a9a8a8a9a9a9a1a1a1a1a1a9a9a7a9a9a1a1a1a1a1a4a1a1a4a9a9a4a1a1a4a1a1a4a4a4a4a4a4a4a4a4a1a1a7a7a1a7a7a1a7a7a1a7a7a1a1a8a8a1a8a8a1a8a8a1a8a1a7a7a1a7a7a1a7a7a1a7a7a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a");
+						//LEVEL 3
+						aLevels.push("7a3a3a3a1a3a3a1a3a3a3a7a8a8a1a8a8a9a8a8a1a8a8a1a7a3a3a3a1a3a3a1a3a3a3a7a10a7a8a10a7a8a7a10a8a7a10a1a7a8a10a1a3a1a1a8a1a10a8a7a3a1a7a1a7a1a7a1a7a1a3a1a1a8a1a1a10a1a1a10a1a1a8a1a1a8a7a3a1a1a1a3a7a8a1a1a1a3a1a10a1a1a1a1a10a1a3a1a1a3a7a1a1a1a1a1a7a3a1a1a1a8a1a10a1a1a1a1a10a1a8a1a1a8a7a1a1a1a1a1a7a8a1a1a1a1a9a1a1a1a1a1a1a9a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a");
+						//LEVEL 4
+						aLevels.push("7a7a1a1a9a10a10a9a1a1a6a6a7a7a1a1a1a9a1a1a1a6a6a1a1a7a1a1a1a10a10a1a1a1a6a1a1a7a1a1a1a9a1a1a1a6a1a1a1a1a7a1a1a10a10a1a1a6a1a1a1a7a1a1a1a9a1a1a1a6a1a1a1a1a9a7a7a8a8a6a6a9a1a1a1a10a7a7a8a8a8a6a6a10a1a1a1a9a9a7a7a8a8a6a6a9a9a1a1a10a10a1a9a10a9a1a10a10a1a1a1a1a1a7a8a6a7a8a6a1a1a1a1a1a1a6a10a1a9a7a1a1a1a1a1a10a10a9a1a1a1a1a10a9a9a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a");
+						//LEVEL 5
+						aLevels.push("10a9a8a7a7a8a1a4a1a2a1a4a6a8a7a7a8a1a4a1a2a1a4a1a7a4a2a2a1a1a4a1a2a1a4a1a7a4a7a7a1a2a1a4a2a4a1a1a1a8a7a7a1a4a2a4a1a2a1a1a8a2a2a1a2a7a4a1a1a4a1a1a7a7a8a8a2a7a2a1a2a1a4a8a7a7a1a1a4a1a4a2a2a4a8a1a1a2a2a4a4a1a2a4a1a2a8a1a1a1a4a1a2a2a1a1a1a4a1a1a1a2a4a1a2a1a8a1a4a2a1a1a2a1a1a2a4a1a8a4a2a7a1a1a1a4a1a4a1a4a1a4a1a1a7a1a1a2a4a1a1a2a2a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a");
+				
+						
+				
+                        var oMain = new CMain({
+												board_y:150,         //Y OF BALL ATTACH
+												ball_speed: 4,       //BALL SPEED
+												ball_colors:9,       //NUMBER OF DIFFERENT COLORED BALLS
+												shot_for_ceiling: 5, //NUMBER OF SHOT BEFORE CEIL GOES DOWN
+												score_explosion:15,  //POINTS FOR EACH BALL EXPLOSION
+												score_fall:20 ,      //POINTS FOR EACH FALLEN BALL
+												levels: aLevels      //LEVELS DATA
+												});
+
+                         $(oMain).on("game_start", function(evt) {
+                                 //alert("game_start");
+                         });
+						 
+						 $(oMain).on("end_level", function(evt) {
+                                 //alert("end_level");
+                         });
+
+                         $(oMain).on("save_score", function(evt,score) {
+                                 //alert("save_score: "+score);
+                         });
+
+                         $(oMain).on("restart", function(evt) {
+                                 //alert("restart");
+                         });
+                     });
+				
+            </script>
+        <canvas id="canvas" class='ani_hack' width="768" height="1024"> </canvas>
+<div style="text-align:center;">
+<p>更多源码：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
+</div>
+    </body>
+</html>
